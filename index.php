@@ -1,4 +1,4 @@
-<? include 'init.php' ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,26 +9,6 @@
 </head>
 <body>
   <h1>CF PHP Buildpack Demo</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Language</th>
-        <th>URL</th>
-      </tr>
-    </thead>
-    <tbody>
-    <? while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) { ?>
-      <tr>
-      <? foreach ($line as $col_value) { ?>
-        <td><? echo $col_value ?></td>
-      <? } ?>
-      </tr>
-    <? } ?>
-    </tbody>
-  </table>
-  <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <? phpinfo() ?>
 </body>
 </html>
-<? include 'teardown.php' ?>
